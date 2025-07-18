@@ -47,6 +47,7 @@ const Portfolio = () => {
         <Projects />
         <Contact />
         <Footer scrollToSection={scrollToSection} />
+        <Toaster />
       </div>
     </div>
   );
