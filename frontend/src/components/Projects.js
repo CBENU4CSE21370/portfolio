@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button } from './ui/button';
-import { ExternalLink, Github, Star } from 'lucide-react';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
@@ -16,7 +15,7 @@ const Projects = () => {
       featured: true,
       github: "https://github.com/yashwanth/techmed-analytics",
       demo: "https://techmed-analytics.demo.com/",
-      icon: "🏥"
+      emoji: "🏥"
     },
     {
       id: 2,
@@ -28,7 +27,7 @@ const Projects = () => {
       featured: true,
       github: "https://github.com/yashwanth/rom-benchmarker",
       demo: null,
-      icon: "📱"
+      emoji: "📱"
     },
     {
       id: 3,
@@ -40,7 +39,7 @@ const Projects = () => {
       featured: true,
       github: "https://github.com/yashwanth/audio-spectrum",
       demo: "https://audio-spectrum.demo.com/",
-      icon: "🎵"
+      emoji: "🎵"
     },
     {
       id: 4,
@@ -52,7 +51,7 @@ const Projects = () => {
       featured: false,
       github: "https://github.com/yashwanth/hardware-monitor",
       demo: null,
-      icon: "🔧"
+      emoji: "🔧"
     },
     {
       id: 5,
@@ -64,7 +63,7 @@ const Projects = () => {
       featured: false,
       github: "https://github.com/yashwanth/photo-portfolio",
       demo: "https://photo-portfolio.demo.com/",
-      icon: "📸"
+      emoji: "📸"
     },
     {
       id: 6,
@@ -76,36 +75,35 @@ const Projects = () => {
       featured: false,
       github: "https://github.com/yashwanth/smart-home",
       demo: null,
-      icon: "🏠"
+      emoji: "🏠"
     }
   ];
 
   const categories = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'fullstack', label: 'Full-Stack' },
-    { id: 'web', label: 'Web Apps' },
-    { id: 'mobile', label: 'Mobile' },
-    { id: 'iot', label: 'IoT' }
+    { id: 'all', label: 'All Projects', emoji: '🎯' },
+    { id: 'fullstack', label: 'Full-Stack', emoji: '💻' },
+    { id: 'web', label: 'Web Apps', emoji: '🌐' },
+    { id: 'mobile', label: 'Mobile', emoji: '📱' },
+    { id: 'iot', label: 'IoT', emoji: '🔌' }
   ];
 
   const filteredProjects = filter === 'all' 
     ? projects 
     : projects.filter(project => project.category === filter);
 
-  const featuredProjects = projects.filter(project => project.featured);
-
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="glass-card inline-block p-8 rounded-lg mb-8">
-            <h2 className="text-4xl sm:text-5xl font-light text-white mb-4">
+          <div className="aero-glass inline-block p-8 rounded-lg mb-8">
+            <h2 className="text-4xl sm:text-5xl font-light text-primary text-glow mb-4">
+              <span className="skeuomorphic-icon mr-4">🚀</span>
               Featured Projects
             </h2>
-            <p className="text-lg text-white/90 max-w-3xl mx-auto">
-              Explore my latest work spanning from healthcare technology to audio production tools
+            <p className="text-lg text-secondary max-w-3xl mx-auto">
+              <span className="skeuomorphic-icon">🔍</span> Explore my latest work spanning from healthcare technology to audio production tools
             </p>
-            <div className="w-24 h-1 bg-blue-400 mx-auto mt-4"></div>
+            <div className="w-24 h-1 bg-blue-400 mx-auto mt-4 rounded-full"></div>
           </div>
         </div>
 
@@ -116,12 +114,13 @@ const Projects = () => {
               key={category.id}
               variant={filter === category.id ? "default" : "outline"}
               onClick={() => setFilter(category.id)}
-              className={`${
+              className={`aero-button ${
                 filter === category.id 
-                  ? 'bg-blue-600 text-white' 
-                  : 'border-white/20 text-white hover:bg-white/10'
+                  ? 'bg-blue-600/30 text-primary border-blue-400/50' 
+                  : 'text-secondary'
               } transition-all duration-300`}
             >
+              <span className="skeuomorphic-icon mr-2">{category.emoji}</span>
               {category.label}
             </Button>
           ))}
@@ -132,7 +131,7 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div 
               key={project.id}
-              className="glass-card rounded-lg overflow-hidden group transform transition-all duration-500 hover:scale-105"
+              className="aero-glass rounded-lg overflow-hidden group transform transition-all duration-500 hover:scale-105 project-card"
               style={{
                 animationDelay: `${index * 0.1}s`
               }}
@@ -145,30 +144,30 @@ const Projects = () => {
                 />
                 <div className="absolute top-4 right-4">
                   {project.featured && (
-                    <span className="glass-card px-3 py-1 text-xs text-white flex items-center space-x-1">
-                      <Star className="h-3 w-3" />
+                    <span className="aero-glass px-3 py-1 text-xs text-primary flex items-center space-x-1">
+                      <span className="skeuomorphic-icon">⭐</span>
                       <span>Featured</span>
                     </span>
                   )}
                 </div>
                 <div className="absolute top-4 left-4">
-                  <div className="glass-card p-2 rounded-lg">
-                    <span className="text-2xl">{project.icon}</span>
+                  <div className="aero-glass p-2 rounded-lg">
+                    <span className="skeuomorphic-icon text-2xl">{project.emoji}</span>
                   </div>
                 </div>
               </div>
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-medium text-white group-hover:text-blue-200 transition-colors">
+                  <h3 className="text-xl font-medium text-primary text-glow group-hover:text-blue-300 transition-colors">
                     {project.title}
                   </h3>
-                  <span className="text-xs text-white/60 capitalize px-2 py-1 glass-card rounded">
+                  <span className="text-xs text-muted capitalize px-2 py-1 aero-glass rounded">
                     {project.category}
                   </span>
                 </div>
                 
-                <p className="text-white/80 text-sm mb-4 line-clamp-3">
+                <p className="text-secondary text-sm mb-4 line-clamp-3">
                   {project.description}
                 </p>
                 
@@ -176,13 +175,13 @@ const Projects = () => {
                   {project.technologies.slice(0, 3).map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="px-3 py-1 bg-blue-600/20 text-blue-200 text-xs rounded-full"
+                      className="px-3 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full aero-glass"
                     >
                       {tech}
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full">
+                    <span className="px-3 py-1 aero-glass text-muted text-xs rounded-full">
                       +{project.technologies.length - 3} more
                     </span>
                   )}
@@ -192,19 +191,19 @@ const Projects = () => {
                   <Button 
                     size="sm" 
                     variant="outline"
-                    className="border-white/20 text-white hover:bg-white/10 flex-1"
+                    className="aero-button text-primary flex-1"
                     onClick={() => window.open(project.github, '_blank')}
                   >
-                    <Github className="h-4 w-4 mr-2" />
+                    <span className="skeuomorphic-icon mr-2">💻</span>
                     Code
                   </Button>
                   {project.demo && (
                     <Button 
                       size="sm"
-                      className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
+                      className="aero-button bg-blue-600/30 border-blue-400/50 text-primary flex-1"
                       onClick={() => window.open(project.demo, '_blank')}
                     >
-                      <ExternalLink className="h-4 w-4 mr-2" />
+                      <span className="skeuomorphic-icon mr-2">🔗</span>
                       Live
                     </Button>
                   )}
@@ -217,11 +216,12 @@ const Projects = () => {
         <div className="text-center mt-12">
           <Button 
             size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 transition-all duration-300 transform hover:scale-105"
+            className="aero-button bg-blue-600/30 border-blue-400/50 text-primary px-8 py-3 transition-all duration-300 transform hover:scale-105"
             onClick={() => window.open('https://github.com/yashwanth', '_blank')}
           >
+            <span className="skeuomorphic-icon mr-2">👀</span>
             View All Projects
-            <ExternalLink className="ml-2 h-5 w-5" />
+            <span className="skeuomorphic-icon ml-2">🔗</span>
           </Button>
         </div>
       </div>

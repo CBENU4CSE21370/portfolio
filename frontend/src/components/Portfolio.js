@@ -5,10 +5,12 @@ import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
+import ScrollLines from './ScrollLines';
 import { Toaster } from './ui/toaster';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +33,17 @@ const Portfolio = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Apply theme class to document body
+    if (isDarkMode) {
+      document.documentElement.classList.remove('light-mode');
+      document.body.classList.remove('light-mode');
+    } else {
+      document.documentElement.classList.add('light-mode');
+      document.body.classList.add('light-mode');
+    }
+  }, [isDarkMode]);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -38,10 +51,20 @@ const Portfolio = () => {
     }
   };
 
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
-    <div className="portfolio-background">
+    <div className={`portfolio-background ${isDarkMode ? '' : 'light-mode'}`}>
+      <ScrollLines />
       <div className="portfolio-content">
-        <Header activeSection={activeSection} scrollToSection={scrollToSection} />
+        <Header 
+          activeSection={activeSection} 
+          scrollToSection={scrollToSection}
+          isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+        />
         <Hero scrollToSection={scrollToSection} />
         <About />
         <Projects />
