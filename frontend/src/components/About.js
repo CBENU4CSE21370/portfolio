@@ -1,35 +1,34 @@
 import React from 'react';
-import { Code, Camera, Music, Gamepad2, Plane, Book } from 'lucide-react';
 
 const About = () => {
   const interests = [
     {
-      icon: <Code className="h-8 w-8" />,
+      emoji: "💻",
       title: "Web Development",
       description: "I build responsive websites using HTML, CSS, and JavaScript."
     },
     {
-      icon: <Camera className="h-8 w-8" />,
+      emoji: "📸",
       title: "Photography",
       description: "I love capturing landscape shots and urban scenes."
     },
     {
-      icon: <Music className="h-8 w-8" />,
+      emoji: "🎵",
       title: "Music Production",
       description: "I produce electronic tracks in Ableton Live."
     },
     {
-      icon: <Gamepad2 className="h-8 w-8" />,
+      emoji: "🎮",
       title: "Gaming",
       description: "I enjoy immersive story-driven games like Cyberpunk 2077."
     },
     {
-      icon: <Plane className="h-8 w-8" />,
+      emoji: "✈️",
       title: "Travel",
       description: "Exploring new cultures and cuisines is my passion."
     },
     {
-      icon: <Book className="h-8 w-8" />,
+      emoji: "📚",
       title: "Reading",
       description: "I read sci-fi novels and tech blogs in my spare time."
     }
@@ -39,23 +38,24 @@ const About = () => {
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="glass-card inline-block p-6 rounded-lg mb-8">
-            <h2 className="text-4xl sm:text-5xl font-light text-white mb-4">
+          <div className="aero-glass inline-block p-6 rounded-lg mb-8">
+            <h2 className="text-4xl sm:text-5xl font-light text-primary text-glow mb-4">
+              <span className="skeuomorphic-icon mr-4">👨‍💻</span>
               About Me
             </h2>
-            <div className="w-24 h-1 bg-blue-400 mx-auto"></div>
+            <div className="w-24 h-1 bg-blue-400 mx-auto rounded-full"></div>
           </div>
         </div>
 
         <div className="mb-16 flex justify-center">
-          <div className="max-w-4xl glass-card p-8 rounded-lg">
-            <p className="text-lg text-white leading-relaxed text-center">
-              Hi, I'm Yashwanth, CTO at Techmedok.com. I explore and benchmark 
-              cutting‑edge platforms—from beta OS builds to custom ROMs—to surface 
-              performance insights and practical guidance through my writing. Outside 
+          <div className="max-w-4xl aero-glass p-8 rounded-lg">
+            <p className="text-lg text-secondary leading-relaxed text-center">
+              <span className="skeuomorphic-icon">👋</span> Hi, I'm Yashwanth, CTO at Techmedok.com. 
+              I explore and benchmark cutting‑edge platforms—from beta OS builds to custom ROMs—to surface 
+              performance insights and practical guidance through my writing. <span className="skeuomorphic-icon">🔧</span> Outside 
               of that, I prototype DIY hardware/software projects, capture visuals as 
-              an amateur photographer, and dive into audio as an occasional music 
-              producer and dedicated audiophile.
+              an amateur photographer <span className="skeuomorphic-icon">📷</span>, and dive into audio as an occasional music 
+              producer and dedicated audiophile <span className="skeuomorphic-icon">🎧</span>.
             </p>
           </div>
         </div>
@@ -64,20 +64,20 @@ const About = () => {
           {interests.map((interest, index) => (
             <div 
               key={index}
-              className="glass-card p-6 rounded-lg group transform transition-all duration-300 hover:scale-105"
+              className="aero-glass p-6 rounded-lg group transform transition-all duration-300 hover:scale-105 project-card"
               style={{
                 animationDelay: `${index * 0.1}s`
               }}
             >
               <div className="flex items-center space-x-4 mb-4">
-                <div className="p-3 bg-blue-600/20 rounded-lg text-blue-300 group-hover:text-blue-200 transition-colors">
-                  {interest.icon}
+                <div className="p-3 aero-glass rounded-lg text-4xl group-hover:scale-110 transition-transform">
+                  <span className="skeuomorphic-icon">{interest.emoji}</span>
                 </div>
-                <h3 className="text-xl font-medium text-white group-hover:text-blue-200 transition-colors">
+                <h3 className="text-xl font-medium text-primary text-glow group-hover:text-blue-300 transition-colors">
                   {interest.title}
                 </h3>
               </div>
-              <p className="text-white/80 text-sm leading-relaxed">
+              <p className="text-secondary text-sm leading-relaxed">
                 {interest.description}
               </p>
             </div>
@@ -85,12 +85,13 @@ const About = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="glass-card inline-block p-6 rounded-lg">
-            <h3 className="text-2xl font-medium text-white mb-4">
+          <div className="aero-glass inline-block p-6 rounded-lg">
+            <h3 className="text-2xl font-medium text-primary text-glow mb-4">
+              <span className="skeuomorphic-icon mr-2">🤝</span>
               Let's Build Something Amazing Together
             </h3>
-            <p className="text-white/80 max-w-2xl">
-              I'm always excited to work on innovative projects and collaborate 
+            <p className="text-secondary max-w-2xl">
+              <span className="skeuomorphic-icon">⚡</span> I'm always excited to work on innovative projects and collaborate 
               with passionate people who share a vision for creating impactful technology.
             </p>
           </div>

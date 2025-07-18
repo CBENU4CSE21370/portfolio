@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
-import { ChevronDown, Download } from 'lucide-react';
 
 const Hero = ({ scrollToSection }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -9,7 +8,12 @@ const Hero = ({ scrollToSection }) => {
     setIsLoaded(true);
   }, []);
 
-  const titles = ['BTech CSE Graduate', 'CTO at Techmedok.com', 'Tech Explorer', 'Creative Developer'];
+  const titles = [
+    'BTech CSE Graduate 🎓',
+    'CTO at Techmedok.com 🏥',
+    'Tech Explorer 🔬',
+    'Creative Developer 🎨'
+  ];
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
 
   useEffect(() => {
@@ -20,27 +24,29 @@ const Hero = ({ scrollToSection }) => {
   }, [titles.length]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
       <div className="max-w-4xl mx-auto text-center">
         <div className={`space-y-8 ${isLoaded ? 'fade-in' : 'opacity-0'}`}>
           <div className="space-y-4">
-            <h2 className="text-2xl sm:text-3xl text-white/90 font-light">
-              Hi, I'm
+            <h2 className="text-2xl sm:text-3xl text-secondary font-light">
+              <span className="skeuomorphic-icon">👋</span> Hi, I'm
             </h2>
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-light text-white mb-6">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-light text-primary text-glow mb-6">
               Yashwanth
             </h1>
             <div className="h-16">
-              <p className="text-xl sm:text-2xl lg:text-3xl text-white/90 font-light transition-all duration-500">
+              <p className="text-xl sm:text-2xl lg:text-3xl text-secondary font-light transition-all duration-500">
                 {titles[currentTitleIndex]}
               </p>
             </div>
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="glass-card p-6 rounded-lg">
-              <p className="text-lg text-white/90 leading-relaxed">
-                CTO at Techmedok.com • Tech Explorer • Creator
+            <div className="aero-glass p-6 rounded-lg">
+              <p className="text-lg text-secondary leading-relaxed">
+                <span className="skeuomorphic-icon">🚀</span> CTO at Techmedok.com • 
+                <span className="skeuomorphic-icon">🔍</span> Tech Explorer • 
+                <span className="skeuomorphic-icon">✨</span> Creator
               </p>
             </div>
           </div>
@@ -49,17 +55,18 @@ const Hero = ({ scrollToSection }) => {
             <Button 
               size="lg"
               onClick={() => scrollToSection('about')}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+              className="aero-button text-primary px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
+              <span className="skeuomorphic-icon mr-2">📖</span>
               Learn More About Me
-              <ChevronDown className="ml-2 h-5 w-5" />
+              <span className="skeuomorphic-icon ml-2">⬇️</span>
             </Button>
             <Button 
               variant="outline"
               size="lg"
-              className="border-white/20 text-white hover:bg-white/10 px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+              className="aero-button text-primary px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
-              <Download className="mr-2 h-5 w-5" />
+              <span className="skeuomorphic-icon mr-2">📄</span>
               Download Resume
             </Button>
           </div>
@@ -68,9 +75,9 @@ const Hero = ({ scrollToSection }) => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 float">
           <button 
             onClick={() => scrollToSection('about')}
-            className="p-3 glass-card rounded-full text-white hover:bg-white/10 transition-all duration-300"
+            className="p-3 aero-glass rounded-full text-primary hover:bg-white/10 transition-all duration-300"
           >
-            <ChevronDown className="h-6 w-6" />
+            <span className="skeuomorphic-icon text-2xl">⬇️</span>
           </button>
         </div>
       </div>
