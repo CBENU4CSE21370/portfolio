@@ -5,6 +5,7 @@ import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
+import { Toaster } from './ui/toaster';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
