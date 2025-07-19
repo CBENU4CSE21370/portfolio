@@ -54,9 +54,7 @@ const Header = ({ activeSection, scrollToSection, isDarkMode, toggleTheme }) => 
               onClick={toggleTheme}
               className="aero-button text-primary theme-toggle"
             >
-              <span className="skeuomorphic-icon">
-                {isDarkMode ? '☀️' : '🌙'}
-              </span>
+              <span className={`flat-icon ${isDarkMode ? 'icon-sun' : 'icon-moon'}`}></span>
               <span className="ml-2 text-sm">
                 {isDarkMode ? 'Light' : 'Dark'}
               </span>
