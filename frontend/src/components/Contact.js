@@ -92,15 +92,15 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <div className="space-y-8">
-            <div className="aero-glass p-8 rounded-lg">
+            <div className="space-y-6">
               <h3 className="text-2xl font-medium text-primary text-glow mb-6">
-                <span className="skeuomorphic-icon mr-2">💌</span>
+                <span className="flat-icon icon-message mr-2"></span>
                 Send me a message
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-secondary mb-2">
-                    <span className="skeuomorphic-icon mr-1">👤</span>
+                    <span className="flat-icon icon-user mr-1"></span>
                     Name
                   </label>
                   <Input
@@ -116,7 +116,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-secondary mb-2">
-                    <span className="skeuomorphic-icon mr-1">📧</span>
+                    <span className="flat-icon icon-email mr-1"></span>
                     Email
                   </label>
                   <Input
@@ -132,7 +132,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-secondary mb-2">
-                    <span className="skeuomorphic-icon mr-1">💬</span>
+                    <span className="flat-icon icon-message mr-1"></span>
                     Message
                   </label>
                   <Textarea
@@ -146,23 +146,23 @@ const Contact = () => {
                     className="aero-input text-primary placeholder-muted"
                   />
                 </div>
-                <Button 
+                <button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full aero-button bg-blue-600/30 border-blue-400/50 text-primary py-3 transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-blue-600/30 border border-blue-400/50 text-primary py-3 transition-all duration-300 transform hover:scale-105 hover:bg-blue-600/40"
                 >
                   {isSubmitting ? (
-                    <div className="flex items-center space-x-2">
-                      <span className="skeuomorphic-icon animate-bounce">⏳</span>
+                    <div className="flex items-center justify-center space-x-2">
+                      <span className="flat-icon icon-clock animate-bounce"></span>
                       <span>Sending...</span>
                     </div>
                   ) : (
                     <>
-                      <span className="skeuomorphic-icon mr-2">📤</span>
+                      <span className="flat-icon icon-send mr-2"></span>
                       Send Message
                     </>
                   )}
-                </Button>
+                </button>
               </form>
             </div>
           </div>
