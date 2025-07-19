@@ -78,17 +78,15 @@ const Contact = () => {
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="aero-glass inline-block p-8 rounded-lg mb-8">
-            <h2 className="text-4xl sm:text-5xl font-light text-primary text-glow mb-4">
-              <span className="skeuomorphic-icon mr-4">📞</span>
-              Get In Touch
-            </h2>
-            <p className="text-lg text-secondary max-w-3xl mx-auto">
-              <span className="skeuomorphic-icon">🤝</span> I'm always interested in discussing new opportunities, collaborations, 
-              or just having a chat about technology.
-            </p>
-            <div className="w-24 h-1 bg-blue-400 mx-auto mt-4 rounded-full"></div>
-          </div>
+          <h2 className="text-4xl sm:text-5xl font-light text-primary text-glow mb-4">
+            <span className="flat-icon icon-contact mr-4"></span>
+            Get In Touch
+          </h2>
+          <p className="text-lg text-secondary max-w-3xl mx-auto">
+            <span className="flat-icon icon-handshake"></span> I'm always interested in discussing new opportunities, collaborations, 
+            or just having a chat about technology.
+          </p>
+          <div className="w-24 h-1 bg-blue-400 mx-auto mt-4 rounded-full"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
