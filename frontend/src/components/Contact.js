@@ -170,16 +170,16 @@ const Contact = () => {
           {/* Contact Info & Social Links */}
           <div className="space-y-8">
             {/* Contact Information */}
-            <div className="aero-glass p-8 rounded-lg">
+            <div className="space-y-6">
               <h3 className="text-2xl font-medium text-primary text-glow mb-6">
-                <span className="skeuomorphic-icon mr-2">📋</span>
+                <span className="flat-icon icon-contact mr-2"></span>
                 Contact Information
               </h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-center space-x-4">
                     <div className="p-3 aero-glass text-3xl rounded-lg">
-                      <span className="skeuomorphic-icon">{info.emoji}</span>
+                      <span className={`flat-icon ${info.iconClass}`}></span>
                     </div>
                     <div>
                       <p className="text-sm font-medium text-secondary">{info.label}</p>
@@ -200,9 +200,9 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="aero-glass p-8 rounded-lg">
+            <div className="space-y-6">
               <h3 className="text-2xl font-medium text-primary text-glow mb-6">
-                <span className="skeuomorphic-icon mr-2">🌐</span>
+                <span className="flat-icon icon-globe mr-2"></span>
                 Find me online
               </h3>
               <div className="grid grid-cols-1 gap-4">
@@ -212,27 +212,15 @@ const Contact = () => {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-4 p-4 aero-glass rounded-lg hover:bg-white/5 transition-all duration-300 transform hover:scale-105"
+                    className="flex items-center space-x-4 p-4 border border-white/20 rounded-lg hover:border-white/40 transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="text-3xl">
-                      <span className="skeuomorphic-icon">{social.emoji}</span>
+                      <span className={`flat-icon ${social.iconClass}`}></span>
                     </div>
                     <span className="text-primary text-glow font-medium">{social.label}</span>
                   </a>
                 ))}
               </div>
-            </div>
-
-            {/* Quick Response Message */}
-            <div className="aero-glass p-6 rounded-lg text-center">
-              <h4 className="text-lg font-medium text-primary text-glow mb-2">
-                <span className="skeuomorphic-icon mr-2">⚡</span>
-                Quick Response
-              </h4>
-              <p className="text-secondary text-sm">
-                <span className="skeuomorphic-icon">🕐</span> I typically respond to messages within 24 hours. For urgent matters, 
-                feel free to reach out via email directly.
-              </p>
             </div>
           </div>
         </div>
