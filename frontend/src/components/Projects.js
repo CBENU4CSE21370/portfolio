@@ -15,7 +15,7 @@ const Projects = () => {
       featured: true,
       github: "https://github.com/yashwanth/techmed-analytics",
       demo: "https://techmed-analytics.demo.com/",
-      emoji: "🏥"
+      iconClass: "icon-code"
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const Projects = () => {
       featured: true,
       github: "https://github.com/yashwanth/rom-benchmarker",
       demo: null,
-      emoji: "📱"
+      iconClass: "icon-phone"
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ const Projects = () => {
       featured: true,
       github: "https://github.com/yashwanth/audio-spectrum",
       demo: "https://audio-spectrum.demo.com/",
-      emoji: "🎵"
+      iconClass: "icon-music"
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ const Projects = () => {
       featured: false,
       github: "https://github.com/yashwanth/hardware-monitor",
       demo: null,
-      emoji: "🔧"
+      iconClass: "icon-tool"
     },
     {
       id: 5,
@@ -63,7 +63,7 @@ const Projects = () => {
       featured: false,
       github: "https://github.com/yashwanth/photo-portfolio",
       demo: "https://photo-portfolio.demo.com/",
-      emoji: "📸"
+      iconClass: "icon-camera"
     },
     {
       id: 6,
@@ -75,7 +75,7 @@ const Projects = () => {
       featured: false,
       github: "https://github.com/yashwanth/smart-home",
       demo: null,
-      emoji: "🏠"
+      iconClass: "icon-tool"
     }
   ];
 
