@@ -46,14 +46,14 @@ const About = () => {
         </div>
 
         <div className="mb-16 flex justify-center">
-          <div className="max-w-4xl aero-glass p-8 rounded-lg">
+          <div className="max-w-4xl">
             <p className="text-lg text-secondary leading-relaxed text-center">
-              <span className="skeuomorphic-icon">👋</span> Hi, I'm Yashwanth, CTO at Techmedok.com. 
+              <span className="flat-icon icon-wave"></span> Hi, I'm Yashwanth, CTO at Techmedok.com. 
               I explore and benchmark cutting‑edge platforms—from beta OS builds to custom ROMs—to surface 
-              performance insights and practical guidance through my writing. <span className="skeuomorphic-icon">🔧</span> Outside 
+              performance insights and practical guidance through my writing. <span className="flat-icon icon-tool"></span> Outside 
               of that, I prototype DIY hardware/software projects, capture visuals as 
-              an amateur photographer <span className="skeuomorphic-icon">📷</span>, and dive into audio as an occasional music 
-              producer and dedicated audiophile <span className="skeuomorphic-icon">🎧</span>.
+              an amateur photographer <span className="flat-icon icon-camera"></span>, and dive into audio as an occasional music 
+              producer and dedicated audiophile <span className="flat-icon icon-music"></span>.
             </p>
           </div>
         </div>
