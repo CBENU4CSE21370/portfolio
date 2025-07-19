@@ -3,32 +3,32 @@ import React from 'react';
 const About = () => {
   const interests = [
     {
-      emoji: "💻",
+      iconClass: "icon-code",
       title: "Web Development",
       description: "I build responsive websites using HTML, CSS, and JavaScript."
     },
     {
-      emoji: "📸",
+      iconClass: "icon-camera",
       title: "Photography",
       description: "I love capturing landscape shots and urban scenes."
     },
     {
-      emoji: "🎵",
+      iconClass: "icon-music",
       title: "Music Production",
       description: "I produce electronic tracks in Ableton Live."
     },
     {
-      emoji: "🎮",
+      iconClass: "icon-gamepad",
       title: "Gaming",
       description: "I enjoy immersive story-driven games like Cyberpunk 2077."
     },
     {
-      emoji: "✈️",
+      iconClass: "icon-plane",
       title: "Travel",
       description: "Exploring new cultures and cuisines is my passion."
     },
     {
-      emoji: "📚",
+      iconClass: "icon-book",
       title: "Reading",
       description: "I read sci-fi novels and tech blogs in my spare time."
     }
