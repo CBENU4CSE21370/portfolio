@@ -69,7 +69,7 @@ const About = () => {
             >
               <div className="flex items-center space-x-4 mb-4">
                 <div className="p-3 aero-glass rounded-lg text-4xl group-hover:scale-110 transition-transform">
-                  <span className="skeuomorphic-icon">{interest.emoji}</span>
+                  <span className={`flat-icon ${interest.iconClass}`}></span>
                 </div>
                 <h3 className="text-xl font-medium text-primary text-glow group-hover:text-blue-300 transition-colors">
                   {interest.title}
