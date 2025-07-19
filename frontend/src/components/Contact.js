@@ -37,19 +37,19 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      emoji: "📧",
+      iconClass: "icon-email",
       label: "Email",
       value: "yashwanth.dev@gmail.com",
       link: "mailto:yashwanth.dev@gmail.com"
     },
     {
-      emoji: "🌍",
+      iconClass: "icon-location",
       label: "Location",
       value: "India",
       link: null
     },
     {
-      emoji: "⏰",
+      iconClass: "icon-clock",
       label: "Available",
       value: "Mon - Fri, 9AM - 6PM IST",
       link: null
@@ -58,17 +58,17 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      emoji: "💻",
+      iconClass: "icon-github",
       label: "GitHub",
       link: "https://github.com/yashwanth",
     },
     {
-      emoji: "💼",
+      iconClass: "icon-linkedin",
       label: "LinkedIn", 
       link: "https://linkedin.com/in/yashwanth-dev",
     },
     {
-      emoji: "📧",
+      iconClass: "icon-email",
       label: "Email",
       link: "mailto:yashwanth.dev@gmail.com",
     }
