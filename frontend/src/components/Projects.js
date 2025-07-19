@@ -123,86 +123,78 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Projects Alternating Layout */}
+        <div className="space-y-16">
           {filteredProjects.map((project, index) => (
             <div 
               key={project.id}
-              className="aero-glass rounded-lg overflow-hidden group transform transition-all duration-500 hover:scale-105 project-card"
+              className={`flex flex-col lg:flex-row items-center gap-8 ${
+                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+              }`}
               style={{
                 animationDelay: `${index * 0.1}s`
               }}
             >
-              <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute top-4 right-4">
-                  {project.featured && (
-                    <span className="aero-glass px-3 py-1 text-xs text-primary flex items-center space-x-1">
-                      <span className="skeuomorphic-icon">⭐</span>
-                      <span>Featured</span>
-                    </span>
-                  )}
-                </div>
-                <div className="absolute top-4 left-4">
-                  <div className="aero-glass p-2 rounded-lg">
-                    <span className="skeuomorphic-icon text-2xl">{project.emoji}</span>
+              {/* Project Image */}
+              <div className="w-full lg:w-1/2">
+                <div className="relative overflow-hidden rounded-lg">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-64 lg:h-80 object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <div className="aero-glass p-2 rounded-lg">
+                      <span className={`flat-icon ${project.iconClass} text-2xl`}></span>
+                    </div>
                   </div>
                 </div>
               </div>
               
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-medium text-primary text-glow group-hover:text-blue-300 transition-colors">
-                    {project.title}
-                  </h3>
-                  <span className="text-xs text-muted capitalize px-2 py-1 aero-glass rounded">
-                    {project.category}
-                  </span>
+              {/* Project Content */}
+              <div className="w-full lg:w-1/2 space-y-6">
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-2xl lg:text-3xl font-medium text-primary text-glow">
+                      {project.title}
+                    </h3>
+                    <span className="text-xs text-muted capitalize px-3 py-1 border border-white/20 rounded">
+                      {project.category}
+                    </span>
+                  </div>
+                  
+                  <p className="text-secondary text-base leading-relaxed">
+                    {project.description}
+                  </p>
                 </div>
                 
-                <p className="text-secondary text-sm mb-4 line-clamp-3">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="px-3 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full aero-glass"
+                      className="px-3 py-1 bg-blue-600/20 text-blue-300 text-sm border border-blue-400/30"
                     >
                       {tech}
                     </span>
                   ))}
-                  {project.technologies.length > 3 && (
-                    <span className="px-3 py-1 aero-glass text-muted text-xs rounded-full">
-                      +{project.technologies.length - 3} more
-                    </span>
-                  )}
                 </div>
                 
-                <div className="flex space-x-3">
-                  <Button 
-                    size="sm" 
-                    variant="outline"
-                    className="aero-button text-primary flex-1"
+                <div className="flex space-x-4 pt-4">
+                  <button 
+                    className="px-6 py-2 border border-white/20 text-primary hover:border-white/40 transition-all duration-300"
                     onClick={() => window.open(project.github, '_blank')}
                   >
-                    <span className="skeuomorphic-icon mr-2">💻</span>
+                    <span className="flat-icon icon-github mr-2"></span>
                     Code
-                  </Button>
+                  </button>
                   {project.demo && (
-                    <Button 
-                      size="sm"
-                      className="aero-button bg-blue-600/30 border-blue-400/50 text-primary flex-1"
+                    <button 
+                      className="px-6 py-2 bg-blue-600/30 border border-blue-400/50 text-primary hover:bg-blue-600/40 transition-all duration-300"
                       onClick={() => window.open(project.demo, '_blank')}
                     >
-                      <span className="skeuomorphic-icon mr-2">🔗</span>
-                      Live
-                    </Button>
+                      <span className="flat-icon icon-globe mr-2"></span>
+                      Demo
+                    </button>
                   )}
                 </div>
               </div>
