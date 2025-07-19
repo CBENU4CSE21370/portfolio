@@ -95,16 +95,14 @@ const Projects = () => {
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="aero-glass inline-block p-8 rounded-lg mb-8">
-            <h2 className="text-4xl sm:text-5xl font-light text-primary text-glow mb-4">
-              <span className="skeuomorphic-icon mr-4">🚀</span>
-              Featured Projects
-            </h2>
-            <p className="text-lg text-secondary max-w-3xl mx-auto">
-              <span className="skeuomorphic-icon">🔍</span> Explore my latest work spanning from healthcare technology to audio production tools
-            </p>
-            <div className="w-24 h-1 bg-blue-400 mx-auto mt-4 rounded-full"></div>
-          </div>
+          <h2 className="text-4xl sm:text-5xl font-light text-primary text-glow mb-4">
+            <span className="flat-icon icon-projects mr-4"></span>
+            Featured Projects
+          </h2>
+          <p className="text-lg text-secondary max-w-3xl mx-auto">
+            <span className="flat-icon icon-search"></span> Explore my latest work spanning from healthcare technology to audio production tools
+          </p>
+          <div className="w-24 h-1 bg-blue-400 mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* Filter Buttons */}
