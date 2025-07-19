@@ -26,7 +26,7 @@ const Header = ({ activeSection, scrollToSection, isDarkMode, toggleTheme }) => 
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <h1 className="text-xl font-bold text-glow text-primary">
-              💼 Yashwanthram K A
+              Yashwanthram K A
             </h1>
           </div>
 
