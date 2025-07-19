@@ -108,19 +108,18 @@ const Projects = () => {
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
-            <Button
+            <button
               key={category.id}
-              variant={filter === category.id ? "default" : "outline"}
               onClick={() => setFilter(category.id)}
-              className={`aero-button ${
+              className={`px-6 py-3 border transition-all duration-300 ${
                 filter === category.id 
                   ? 'bg-blue-600/30 text-primary border-blue-400/50' 
-                  : 'text-secondary'
-              } transition-all duration-300`}
+                  : 'text-secondary border-white/20 hover:border-white/40'
+              }`}
             >
-              <span className="skeuomorphic-icon mr-2">{category.emoji}</span>
+              <span className={`flat-icon ${category.iconClass} mr-2`}></span>
               {category.label}
-            </Button>
+            </button>
           ))}
         </div>
 
