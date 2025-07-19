@@ -38,13 +38,11 @@ const About = () => {
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="aero-glass inline-block p-6 rounded-lg mb-8">
-            <h2 className="text-4xl sm:text-5xl font-light text-primary text-glow mb-4">
-              <span className="skeuomorphic-icon mr-4">👨‍💻</span>
-              About Me
-            </h2>
-            <div className="w-24 h-1 bg-blue-400 mx-auto rounded-full"></div>
-          </div>
+          <h2 className="text-4xl sm:text-5xl font-light text-primary text-glow mb-4">
+            <span className="flat-icon icon-about mr-4"></span>
+            About Me
+          </h2>
+          <div className="w-24 h-1 bg-blue-400 mx-auto rounded-full"></div>
         </div>
 
         <div className="mb-16 flex justify-center">
