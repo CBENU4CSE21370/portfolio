@@ -40,7 +40,7 @@ const Header = ({ activeSection, scrollToSection, isDarkMode, toggleTheme }) => 
                   activeSection === item.id ? 'text-blue-300' : 'text-secondary'
                 }`}
               >
-                <span className="skeuomorphic-icon mr-2">{item.emoji}</span>
+                <span className={`flat-icon ${item.iconClass} mr-2`}></span>
                 {item.label}
               </button>
             ))}
