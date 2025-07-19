@@ -67,7 +67,7 @@ const Hero = ({ scrollToSection }) => {
             onClick={() => scrollToSection('about')}
             className="p-3 aero-glass rounded-full text-primary hover:bg-white/10 transition-all duration-300"
           >
-            <span className="skeuomorphic-icon text-2xl">⬇️</span>
+            <span className="flat-icon icon-arrow-down text-2xl"></span>
           </button>
         </div>
       </div>
