@@ -5,23 +5,23 @@ const Footer = ({ scrollToSection }) => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { id: 'home', label: 'Home', emoji: '🏠' },
-    { id: 'about', label: 'About', emoji: '👨‍💻' },
-    { id: 'projects', label: 'Projects', emoji: '🚀' },
-    { id: 'contact', label: 'Contact', emoji: '📞' }
+    { id: 'home', label: 'Home', iconClass: 'icon-home' },
+    { id: 'about', label: 'About', iconClass: 'icon-about' },
+    { id: 'projects', label: 'Projects', iconClass: 'icon-projects' },
+    { id: 'contact', label: 'Contact', iconClass: 'icon-contact' }
   ];
 
   const socialLinks = [
     {
-      emoji: "💻",
+      iconClass: "icon-github",
       link: "https://github.com/yashwanth",
     },
     {
-      emoji: "💼",
+      iconClass: "icon-linkedin",
       link: "https://linkedin.com/in/yashwanth-dev",
     },
     {
-      emoji: "📧",
+      iconClass: "icon-email",
       link: "mailto:yashwanth.dev@gmail.com",
     }
   ];
