@@ -63,7 +63,7 @@ const Footer = ({ scrollToSection }) => {
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold text-primary text-glow mb-4">
-              <span className="skeuomorphic-icon mr-2">🔗</span>
+              <span className="flat-icon icon-globe mr-2"></span>
               Quick Links
             </h4>
             <ul className="space-y-2">
@@ -73,7 +73,7 @@ const Footer = ({ scrollToSection }) => {
                     onClick={() => scrollToSection(link.id)}
                     className="text-secondary hover:text-primary hover:text-glow transition-colors text-sm flex items-center"
                   >
-                    <span className="skeuomorphic-icon mr-2">{link.emoji}</span>
+                    <span className={`flat-icon ${link.iconClass} mr-2`}></span>
                     {link.label}
                   </button>
                 </li>
