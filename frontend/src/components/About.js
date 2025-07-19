@@ -83,16 +83,14 @@ const About = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="aero-glass inline-block p-6 rounded-lg">
-            <h3 className="text-2xl font-medium text-primary text-glow mb-4">
-              <span className="skeuomorphic-icon mr-2">🤝</span>
-              Let's Build Something Amazing Together
-            </h3>
-            <p className="text-secondary max-w-2xl">
-              <span className="skeuomorphic-icon">⚡</span> I'm always excited to work on innovative projects and collaborate 
-              with passionate people who share a vision for creating impactful technology.
-            </p>
-          </div>
+          <h3 className="text-2xl font-medium text-primary text-glow mb-4">
+            <span className="flat-icon icon-handshake mr-2"></span>
+            Let's Build Something Amazing Together
+          </h3>
+          <p className="text-secondary max-w-2xl mx-auto">
+            <span className="flat-icon icon-lightning"></span> I'm always excited to work on innovative projects and collaborate 
+            with passionate people who share a vision for creating impactful technology.
+          </p>
         </div>
       </div>
     </section>
