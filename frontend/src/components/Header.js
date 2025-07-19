@@ -69,9 +69,7 @@ const Header = ({ activeSection, scrollToSection, isDarkMode, toggleTheme }) => 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="aero-button text-primary"
             >
-              <span className="skeuomorphic-icon">
-                {isMobileMenuOpen ? '❌' : '☰'}
-              </span>
+              <span className={`flat-icon ${isMobileMenuOpen ? 'icon-close' : 'icon-menu'}`}></span>
             </Button>
           </div>
         </div>
