@@ -80,11 +80,11 @@ const Projects = () => {
   ];
 
   const categories = [
-    { id: 'all', label: 'All Projects', emoji: '🎯' },
-    { id: 'fullstack', label: 'Full-Stack', emoji: '💻' },
-    { id: 'web', label: 'Web Apps', emoji: '🌐' },
-    { id: 'mobile', label: 'Mobile', emoji: '📱' },
-    { id: 'iot', label: 'IoT', emoji: '🔌' }
+    { id: 'all', label: 'All Projects', iconClass: 'icon-target' },
+    { id: 'fullstack', label: 'Full-Stack', iconClass: 'icon-code' },
+    { id: 'web', label: 'Web Apps', iconClass: 'icon-globe' },
+    { id: 'mobile', label: 'Mobile', iconClass: 'icon-phone' },
+    { id: 'iot', label: 'IoT', iconClass: 'icon-tool' }
   ];
 
   const filteredProjects = filter === 'all' 
