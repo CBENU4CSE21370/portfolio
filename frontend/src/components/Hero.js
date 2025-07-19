@@ -41,32 +41,22 @@ const Hero = ({ scrollToSection }) => {
             </div>
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            <div className="aero-glass p-6 rounded-lg">
-              <p className="text-lg text-secondary leading-relaxed">
-                <span className="skeuomorphic-icon">🚀</span> CTO at Techmedok.com • 
-                <span className="skeuomorphic-icon">🔍</span> Tech Explorer • 
-                <span className="skeuomorphic-icon">✨</span> Creator
-              </p>
-            </div>
-          </div>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg"
               onClick={() => scrollToSection('about')}
               className="aero-button text-primary px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
-              <span className="skeuomorphic-icon mr-2">📖</span>
+              <span className="flat-icon icon-about mr-2"></span>
               Learn More About Me
-              <span className="skeuomorphic-icon ml-2">⬇️</span>
+              <span className="flat-icon icon-arrow-down ml-2"></span>
             </Button>
             <Button 
               variant="outline"
               size="lg"
               className="aero-button text-primary px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
-              <span className="skeuomorphic-icon mr-2">📄</span>
+              <span className="flat-icon icon-email mr-2"></span>
               Download Resume
             </Button>
           </div>
