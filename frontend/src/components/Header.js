@@ -91,7 +91,7 @@ const Header = ({ activeSection, scrollToSection, isDarkMode, toggleTheme }) => 
                       : 'text-secondary hover:bg-white/10'
                   }`}
                 >
-                  <span className="skeuomorphic-icon mr-3">{item.emoji}</span>
+                  <span className={`flat-icon ${item.iconClass} mr-3`}></span>
                   {item.label}
                 </button>
               ))}
