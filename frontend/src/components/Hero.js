@@ -29,7 +29,7 @@ const Hero = ({ scrollToSection }) => {
         <div className={`space-y-8 ${isLoaded ? 'fade-in' : 'opacity-0'}`}>
           <div className="space-y-4">
             <h2 className="text-2xl sm:text-3xl text-secondary font-light">
-              <span className="skeuomorphic-icon">👋</span> Hi, I'm
+              <span className="flat-icon icon-wave"></span> Hi, I'm
             </h2>
             <h1 className="text-6xl sm:text-7xl lg:text-8xl font-light text-primary text-glow mb-6">
               Yashwanth
