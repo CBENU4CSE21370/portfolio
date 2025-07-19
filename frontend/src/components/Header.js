@@ -14,10 +14,10 @@ const Header = ({ activeSection, scrollToSection, isDarkMode, toggleTheme }) => 
   }, []);
 
   const navItems = [
-    { id: 'home', label: 'Home', emoji: '🏠' },
-    { id: 'about', label: 'About', emoji: '👨‍💻' },
-    { id: 'projects', label: 'Projects', emoji: '🚀' },
-    { id: 'contact', label: 'Contact', emoji: '📞' }
+    { id: 'home', label: 'Home', iconClass: 'icon-home' },
+    { id: 'about', label: 'About', iconClass: 'icon-about' },
+    { id: 'projects', label: 'Projects', iconClass: 'icon-projects' },
+    { id: 'contact', label: 'Contact', iconClass: 'icon-contact' }
   ];
 
   return (
