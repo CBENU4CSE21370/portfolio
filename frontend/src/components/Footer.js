@@ -37,14 +37,13 @@ const Footer = ({ scrollToSection }) => {
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold text-primary text-glow mb-4">
-              <span className="skeuomorphic-icon mr-2">💼</span>
               Yashwanth
             </h3>
             <p className="text-secondary mb-6 max-w-md">
-              <span className="skeuomorphic-icon">🎓</span> B.Tech CSE Graduate • 
-              <span className="skeuomorphic-icon">🏥</span> CTO at Techmedok.com • 
-              <span className="skeuomorphic-icon">🔬</span> Tech Explorer • 
-              <span className="skeuomorphic-icon">🎨</span> Creative Developer
+              B.Tech CSE Graduate • 
+              CTO at Techmedok.com • 
+              Tech Explorer • 
+              Creative Developer
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -55,7 +54,7 @@ const Footer = ({ scrollToSection }) => {
                   rel="noopener noreferrer"
                   className="p-3 aero-glass rounded-lg transition-all duration-300 transform hover:scale-110 hover:bg-white/5"
                 >
-                  <span className="skeuomorphic-icon text-2xl">{social.emoji}</span>
+                  <span className={`flat-icon ${social.iconClass} text-2xl`}></span>
                 </a>
               ))}
             </div>
