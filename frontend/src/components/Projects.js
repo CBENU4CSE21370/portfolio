@@ -203,15 +203,14 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button 
-            size="lg"
-            className="aero-button bg-blue-600/30 border-blue-400/50 text-primary px-8 py-3 transition-all duration-300 transform hover:scale-105"
+          <button 
+            className="px-8 py-3 bg-blue-600/30 border border-blue-400/50 text-primary hover:bg-blue-600/40 transition-all duration-300 transform hover:scale-105"
             onClick={() => window.open('https://github.com/yashwanth', '_blank')}
           >
-            <span className="skeuomorphic-icon mr-2">👀</span>
+            <span className="flat-icon icon-github mr-2"></span>
             View All Projects
-            <span className="skeuomorphic-icon ml-2">🔗</span>
-          </Button>
+            <span className="flat-icon icon-globe ml-2"></span>
+          </button>
         </div>
       </div>
     </section>
